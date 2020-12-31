@@ -2,6 +2,7 @@ import React from 'react';
 import "./ParticleShop.css"
 import shopData from "../../elements.json"
 import Canvas from "./Canvas/Canvas"
+import PopularItem from "./PopularItem/PopularItem"
 const ParticleShop = () => {
     return (<div className="particle-shop-wrapper">
 
@@ -12,9 +13,12 @@ const ParticleShop = () => {
 
         </div>
         <div className="shop-jumbotron">
-            <Canvas />
+
         </div>
-        <div className="popular-items"></div>
+        <div className="popular-items">
+            {shopData.map((item) => <PopularItem name={item.name} color={item.color} subColor={item.subColor} />)}
+
+        </div>
         <div className="about-me-container"></div>
 
     </div>);

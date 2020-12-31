@@ -4,13 +4,35 @@
         "id": 0,
         "status": "normal",
         "price": 14.99,
-        "quantity": 2000
+        "quantity": 2000,
+        "color": "#bdc3c7",
+        "subColor": "#84878a"
     },
     {
         "name": "Gold",
         "id": 0,
         "status": "Prime",
         "price": 140.99,
-        "quantity": 340
+        "quantity": 340,
+        "color": "gold",
+        "subColor": "#f1c40f"
+    },
+    {
+        "name": "Platinum",
+        "id": 0,
+        "status": "Prime",
+        "price": 140.99,
+        "quantity": 340,
+        "color": "#1abc9c",
+        "subColor": "#16a085"
+    },
+    {
+        "name": "Vibranium",
+        "id": 0,
+        "status": "Prime",
+        "price": 140.99,
+        "quantity": 340,
+        "color": "#e74c3c",
+        "subColor": "#c0392b"
     }
 ]

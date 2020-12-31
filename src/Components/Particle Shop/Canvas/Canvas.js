@@ -1,19 +1,19 @@
 import React, { useRef, useEffect, useState } from 'react';
 import "./Canvas.css"
 
-const Canvas = () => {
+const Canvas = (props) => {
 
 
     const canvasRef = useRef(null)
 
-    const draw = (ctx, frameCount, xPos1, xPos2, xPos3, yPos1, yPos2, yPos3, size) => {
+    const draw = (ctx, frameCount, xPos1, xPos2, xPos3, xPos4, yPos1, yPos2, yPos3, yPos4, size) => {
         ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height)
-        ctx.fillStyle = '#000000'
+        ctx.fillStyle = props.color
         ctx.beginPath()
         ctx.arc(xPos1, yPos1, size, 0, 2 * Math.PI)
         ctx.fill()
 
-        ctx.fillStyle = 'blue'
+        ctx.fillStyle = props.subColor
         ctx.beginPath()
         ctx.arc(xPos2, yPos2, size / 2, 0, 2 * Math.PI)
         ctx.fill()
@@ -21,9 +21,14 @@ const Canvas = () => {
 
 
 
-        ctx.fillStyle = 'blue'
+        ctx.fillStyle = props.subColor
         ctx.beginPath()
         ctx.arc(xPos3, yPos3, size / 2, 0, 2 * Math.PI)
+        ctx.fill()
+
+        ctx.fillStyle = props.subColor
+        ctx.beginPath()
+        ctx.arc(xPos4, yPos4, size / 2, 0, 2 * Math.PI)
         ctx.fill()
     }
 
@@ -34,22 +39,27 @@ const Canvas = () => {
         const circles = canvas.getContext('2d')
 
         let frameCount = 0;
-        let xPos1 = 300;
-        let yPos1 = 100;
+        let xPos1 = props.width / 2;
+        let yPos1 = 120;
         let velX1 = 5;
         let velY1 = 2;
 
 
-        let xPos2 = 900
-        let yPos2 = 500
-        let velX2 = 3;
-        let velY2 = 3;
+        let xPos2 = (Math.random() * 100) + 100
+        let yPos2 = (Math.random() * 70) + 5
+        let velX2 = (Math.random() * 8);
+        let velY2 = (Math.random() * 8);
 
 
-        let xPos3 = 600;
-        let yPos3 = 100;
-        let velX3 = 2;
-        let velY3 = 8;
+        let xPos3 = (Math.random() * 100) + 100
+        let yPos3 = (Math.random() * 70) + 5
+        let velX3 = (Math.random() * 8) + 2
+        let velY3 = (Math.random() * 8) + 2
+
+        let xPos4 = (Math.random() * 100) + 100
+        let yPos4 = (Math.random() * 70) + 5
+        let velX4 = (Math.random() * 6) + 2
+        let velY4 = (Math.random() * 6) + 2
 
         let animationFrameId
 
@@ -99,15 +109,32 @@ const Canvas = () => {
                 velY3++
             }
 
+            // Ball 3
+
+            if (xPos4 > xPos1) {
+                velX4--
+            }
+            if (xPos4 < xPos1) {
+                velX4++
+            }
+            if (yPos4 > yPos1) {
+                velY4--
+            }
+            if (yPos4 < yPos1) {
+                velY4++
+            }
+
 
             //xPos1 += velX1;
             xPos2 += velX2;
             xPos3 += velX3;
+            xPos4 += velX4;
             yPos2 += velY2;
             yPos3 += velY3;
+            yPos4 += velY4
 
 
-            draw(circles, frameCount, xPos1, xPos2, xPos3, yPos1, yPos2, yPos3, 100)
+            draw(circles, frameCount, xPos1, xPos2, xPos3, xPos4, yPos1, yPos2, yPos3, yPos4, 20)
 
             animationFrameId = window.requestAnimationFrame(render)
 
@@ -120,7 +147,7 @@ const Canvas = () => {
         }
     }, [draw])
 
-    return (<canvas className="jumbotron-canvas" width={window.innerWidth} height={200} ref={canvasRef} />);
+    return (<canvas className="jumbotron-canvas" width={props.width} height={props.height} ref={canvasRef} />);
 }
 
 export default Canvas;

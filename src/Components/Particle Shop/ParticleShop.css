@@ -25,3 +25,10 @@
     width: 100%;
 }
 
+
+.popular-items{
+    padding: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+
