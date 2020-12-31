@@ -1,0 +1,27 @@
+.particle-shop-wrapper{
+    position: relative;
+    height: 1000px;
+    width:  100vw;
+    background-color: white;
+}
+
+.shop-header{
+    background-color: white;
+    border-bottom: 1px solid black;
+    padding: 40px;
+}
+
+.header-title{
+    font-size: 32px;
+    font-family: "Open Sans";
+    font-weight: 800;
+    color: #2f3640;
+}
+
+.shop-jumbotron{
+    position: relative;
+    background-color: #2f3640;
+    height: 200px;
+    width: 100%;
+}
+

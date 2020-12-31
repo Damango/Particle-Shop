@@ -1,0 +1,16 @@
+[
+    {
+        "name": "Iron",
+        "id": 0,
+        "status": "normal",
+        "price": 14.99,
+        "quantity": 2000
+    },
+    {
+        "name": "Gold",
+        "id": 0,
+        "status": "Prime",
+        "price": 140.99,
+        "quantity": 340
+    }
+]
