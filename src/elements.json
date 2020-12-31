@@ -1,6 +1,9 @@
 [
     {
         "name": "Iron",
+        "symbol": "Fe",
+        "elementNumber": 26,
+        "elementWeight": 55.845,
         "id": 0,
         "status": "normal",
         "price": 14.99,
@@ -10,6 +13,9 @@
     },
     {
         "name": "Gold",
+        "symbol": "Au",
+        "elementNumber": 49,
+        "elementWeight": 196.97,
         "id": 0,
         "status": "Prime",
         "price": 140.99,
@@ -19,6 +25,9 @@
     },
     {
         "name": "Platinum",
+        "symbol": "Pt",
+        "elementNumber": 178,
+        "elementWeight": 195.08,
         "id": 0,
         "status": "Prime",
         "price": 140.99,
@@ -28,6 +37,9 @@
     },
     {
         "name": "Vibranium",
+        "symbol": "Vb",
+        "elementNumber": 196,
+        "elementWeight": 200.145,
         "id": 0,
         "status": "Prime",
         "price": 140.99,

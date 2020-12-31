@@ -6,16 +6,25 @@ const Canvas = (props) => {
 
     const canvasRef = useRef(null)
 
-    const draw = (ctx, frameCount, xPos1, xPos2, xPos3, xPos4, yPos1, yPos2, yPos3, yPos4, size) => {
+    const draw = (ctx, frameCount, xPos1, xPos2, xPos3, xPos4, xPos5, yPos1, yPos2, yPos3, yPos4, yPos5, size) => {
         ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height)
         ctx.fillStyle = props.color
         ctx.beginPath()
         ctx.arc(xPos1, yPos1, size, 0, 2 * Math.PI)
+        ctx.stroke()
+        ctx.stroke()
+        let gradient = ctx.createLinearGradient(10, 10, 600, 600);
+        gradient.addColorStop(0, props.color);
+
+        gradient.addColorStop(1, props.subColor)
+        ctx.fillStyle = gradient
         ctx.fill()
 
         ctx.fillStyle = props.subColor
         ctx.beginPath()
         ctx.arc(xPos2, yPos2, size / 2, 0, 2 * Math.PI)
+        ctx.stroke()
+        ctx.stroke()
         ctx.fill()
 
 
@@ -24,12 +33,46 @@ const Canvas = (props) => {
         ctx.fillStyle = props.subColor
         ctx.beginPath()
         ctx.arc(xPos3, yPos3, size / 2, 0, 2 * Math.PI)
+        ctx.stroke()
+        ctx.stroke()
         ctx.fill()
 
         ctx.fillStyle = props.subColor
         ctx.beginPath()
         ctx.arc(xPos4, yPos4, size / 2, 0, 2 * Math.PI)
+        ctx.stroke()
+        ctx.stroke()
         ctx.fill()
+
+        ctx.fillStyle = props.subColor
+        ctx.beginPath()
+        ctx.arc(xPos5, yPos5, size / 2, 0, 2 * Math.PI)
+        ctx.stroke()
+        ctx.stroke()
+        ctx.fill()
+    }
+
+
+    function generateConstraint(randomNumber) {
+
+        let theConidition = false;
+        let newRandom;
+
+
+        while (theConidition === false) {
+
+
+            if (randomNumber > props.width - 100) {
+                newRandom = Math.floor(Math.random() * randomNumber)
+            }
+            if (newRandom < (props.width - 150)) {
+                return newRandom
+                theConidition = true;
+            }
+        }
+
+
+
     }
 
     useEffect(() => {
@@ -40,26 +83,36 @@ const Canvas = (props) => {
 
         let frameCount = 0;
         let xPos1 = props.width / 2;
-        let yPos1 = 120;
+        let yPos1 = props.height / 2;
         let velX1 = 5;
         let velY1 = 2;
 
 
-        let xPos2 = (Math.random() * 100) + 100
-        let yPos2 = (Math.random() * 70) + 5
+
+
+
+
+
+        let xPos2 = (Math.random() * (props.width / 2)) + props.width / 3
+        let yPos2 = (Math.random() * (props.height / 2)) + props.height / 3
         let velX2 = (Math.random() * 8);
         let velY2 = (Math.random() * 8);
 
 
-        let xPos3 = (Math.random() * 100) + 100
-        let yPos3 = (Math.random() * 70) + 5
+        let xPos3 = (Math.random() * (props.width / 2)) + props.width / 3
+        let yPos3 = (Math.random() * (props.height / 2)) + props.height / 3
         let velX3 = (Math.random() * 8) + 2
         let velY3 = (Math.random() * 8) + 2
 
-        let xPos4 = (Math.random() * 100) + 100
-        let yPos4 = (Math.random() * 70) + 5
+        let xPos4 = (Math.random() * (props.width / 2)) + props.width / 3
+        let yPos4 = (Math.random() * (props.height / 2)) + props.height / 3
         let velX4 = (Math.random() * 6) + 2
         let velY4 = (Math.random() * 6) + 2
+
+        let xPos5 = (Math.random() * (props.width / 2)) + props.width / 3
+        let yPos5 = (Math.random() * (props.height / 2)) + props.height / 3
+        let velX5 = (Math.random() * 6) + 2
+        let velY5 = (Math.random() * 6) + 2
 
         let animationFrameId
 
@@ -125,16 +178,33 @@ const Canvas = (props) => {
             }
 
 
+            // Ball 4
+            if (xPos5 > xPos1) {
+                velX5--
+            }
+            if (xPos5 < xPos1) {
+                velX5++
+            }
+            if (yPos5 > yPos1) {
+                velY5--
+            }
+            if (yPos5 < yPos1) {
+                velY5++
+            }
+
+
             //xPos1 += velX1;
             xPos2 += velX2;
             xPos3 += velX3;
             xPos4 += velX4;
+            xPos5 += velX5
             yPos2 += velY2;
             yPos3 += velY3;
             yPos4 += velY4
+            yPos5 += velY5
 
 
-            draw(circles, frameCount, xPos1, xPos2, xPos3, xPos4, yPos1, yPos2, yPos3, yPos4, 20)
+            draw(circles, frameCount, xPos1, xPos2, xPos3, xPos4, xPos5, yPos1, yPos2, yPos3, yPos4, yPos5, props.sizes)
 
             animationFrameId = window.requestAnimationFrame(render)
 

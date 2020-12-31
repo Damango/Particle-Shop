@@ -1,0 +1,27 @@
+.elemental-modal-container{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    width: 800px;
+    height: 500px;
+    z-index: 5;
+    border: 2px solid rgb(53, 53, 53);
+}
+
+
+.modal-right-side{
+    position: relative;
+    background-color: red;
+    float: right;
+}
+.modal-left-side{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    float: left;
+   border-right: 1px solid black;
+    width: 40%;
+    height: 100%;
+}

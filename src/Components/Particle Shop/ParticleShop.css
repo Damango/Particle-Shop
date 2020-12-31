@@ -21,14 +21,76 @@
 .shop-jumbotron{
     position: relative;
     background-color: #2f3640;
-    height: 200px;
+    padding-top: 1px;
+    height: 350px;
     width: 100%;
 }
 
+.jumbo-text{
+    text-align: center;
+    margin-top: 50px;
+    color: white;
+
+}
+.jumbo-text-1{
+    font-family: 'Open Sans';
+    font-weight: bold;
+    font-size: 55px;
+}
+
+.jumbo-text-2{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 450px;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.jumbo-button{
+    position: relative;
+    color: #2f3640;
+    background-color: white;
+    
+    left: 50%;
+    transform: translateX(-50%);
+    font-family:  Poppins;
+    font-weight: bold;
+    border-style: none;
+    margin-top: 40px;
+    padding: 10px 40px;
+    border-radius: 3px;
+    font-size: 20px;
+    border: 2px solid #2f3640;
+    transition: 0.4s;
+}
+
+.jumbo-button:hover{
+        color: white;
+        background-color: #2f3640;
+       border-color:white;
+       cursor: pointer;
+    }
 
 .popular-items{
+    
+ 
+}
+
+.popular-items-wrapper{
+    position: relative;
     padding: 30px;
     display: flex;
     justify-content: space-around;
 }
 
+
+.popular-items-title{
+  text-align: center;
+  font-family: Poppins;
+  font-weight: bold;
+  margin-top: 50px;
+  font-size: 25px;
+  color: #2f3640;
+    
+}
