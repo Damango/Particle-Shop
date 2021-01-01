@@ -4,6 +4,8 @@ import "./Canvas.css"
 const Canvas = (props) => {
 
 
+
+
     const canvasRef = useRef(null)
 
     const draw = (ctx, frameCount, xPos1, xPos2, xPos3, xPos4, xPos5, yPos1, yPos2, yPos3, yPos4, yPos5, size) => {
@@ -53,27 +55,7 @@ const Canvas = (props) => {
     }
 
 
-    function generateConstraint(randomNumber) {
 
-        let theConidition = false;
-        let newRandom;
-
-
-        while (theConidition === false) {
-
-
-            if (randomNumber > props.width - 100) {
-                newRandom = Math.floor(Math.random() * randomNumber)
-            }
-            if (newRandom < (props.width - 150)) {
-                return newRandom
-                theConidition = true;
-            }
-        }
-
-
-
-    }
 
     useEffect(() => {
 

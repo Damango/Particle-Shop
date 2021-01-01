@@ -2,8 +2,26 @@ import React, { useState } from 'react';
 import "./ParticleShop.css"
 import shopData from "../../elements.json"
 import Canvas from "./Canvas/Canvas"
+import BodyCanvas from "./Canvas/BodyCanvas"
 import PopularItem from "./PopularItem/PopularItem"
+import GlowingCube from "./GlowingCube/GlowingCube"
 const ParticleShop = () => {
+
+
+    let pShape = [
+
+        [{ color: "black" }, { color: "black" }, { color: "black" }, { color: "black" }, { color: "black" }],
+        [{ color: "black" }, { color: "black" }, { color: "black" }, { color: "black" }, { color: "black" }, { color: "black" }],
+        [{ color: "black" }, { color: "black" }, { color: "white" }, { color: "white" }, { color: "black" }, { color: "black" }],
+        [{ color: "black" }, { color: "black" }, { color: "white" }, { color: "white" }, { color: "black" }, { color: "black" }],
+        [{ color: "black" }, { color: "black" }, { color: "black" }, { color: "black" }, { color: "black" }, { color: "black" }],
+        [{ color: "black" }, { color: "black" }, { color: "black" }, { color: "black" }, { color: "black" }],
+        [{ color: "black" }, { color: "black" }],
+        [{ color: "black" }, { color: "black" }],
+        [{ color: "black" }, { color: "black" }]
+
+
+    ]
 
 
 
@@ -27,7 +45,30 @@ const ParticleShop = () => {
                 {shopData.map((item) => <PopularItem itemData={item} name={item.name} color={item.color} subColor={item.subColor} />)}
             </div>
         </div>
-        <div className="about-me-container"></div>
+        <div className="about-me-container">
+
+            <div className="about-us-title">- About Us -</div>
+            <div className="about-us-wrapper">
+
+                <div className="about-us-art">
+
+
+                    {pShape.map((shape) =>
+                        <div className="cube-row">
+                            {shape.map((box) => <GlowingCube color={box.color} />)}
+                        </div>)}
+
+
+                </div>
+
+                <div className="about-us-text">
+                    <div className="text-body-1">Our goal here at Partycle Labs to provide quality elements with 0.000001% impurity rate. Our army of Asteroid Miners creates the most affordable price of elements in the entire galaxy</div>
+                    <div className="text-body-1">The elements in our shop come from the highest quality Asteroids that have been roaming around in a vaccum for milenia.</div>
+                </div>
+
+            </div>
+
+        </div>
 
     </div>);
 }

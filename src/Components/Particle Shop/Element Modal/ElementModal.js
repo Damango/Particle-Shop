@@ -6,7 +6,7 @@ const ElementModal = (props) => {
         <div className="close-element-modal" onClick={closeElementModal}>X</div>
         <div className="modal-left-side">
             <div className="modal-element-symbol">{props.data.symbol}</div>
-            <Canvas sizes={50} width={550} height={900} color={props.data.color} subColor={props.data.subColor} />
+            <Canvas sizes={50} width={550} height={800} color={props.data.color} subColor={props.data.subColor} />
             <div className="modal-element-price">{props.data.price}</div>
         </div>
         <div className="modal-right-side">

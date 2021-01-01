@@ -105,3 +105,64 @@
   color: #2f3640;
     
 }
+
+.about-us-title{
+    text-align: center;
+    font-family: Poppins;
+    font-weight: bold;
+    margin-top: 70px;
+    font-size: 25px;
+    color: #2f3640;
+    margin-bottom: 40px;
+      
+  }
+.about-us-wrapper{
+    position: relative;
+   
+    width: 100%;
+    height: 700px;
+}
+
+
+
+    .about-us-art{
+        position: relative;
+        
+        width: 400px;
+        height: 400px;
+        padding: 20px;
+        margin-left: 120px;
+        float: left;
+    }
+
+
+    .cube-row{
+      
+       
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        
+    }
+
+    .cube-row-1{
+        display: flex;
+    }
+
+
+    .about-us-text{
+        position: relative;
+        float: left;
+        margin-left: 100px;
+        margin-top: 30px;
+
+    }
+
+    .text-body-1{
+     
+        width: 600px;
+        font-family: 'Open Sans';
+        font-size: 19px;
+        font-weight:600;
+        margin-top: 20px;
+    }
