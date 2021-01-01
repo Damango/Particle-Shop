@@ -6,10 +6,10 @@
         "elementWeight": 55.845,
         "id": 0,
         "status": "normal",
-        "price": 14.99,
         "quantity": 2000,
         "color": "#bdc3c7",
-        "subColor": "#84878a"
+        "subColor": "#84878a",
+        "price": "$98,000"
     },
     {
         "name": "Gold",
@@ -18,10 +18,10 @@
         "elementWeight": 196.97,
         "id": 0,
         "status": "Prime",
-        "price": 140.99,
         "quantity": 340,
         "color": "gold",
-        "subColor": "#f1c40f"
+        "subColor": "#f1c40f",
+        "price": "$765,000"
     },
     {
         "name": "Platinum",
@@ -30,10 +30,10 @@
         "elementWeight": 195.08,
         "id": 0,
         "status": "Prime",
-        "price": 140.99,
         "quantity": 340,
         "color": "#1abc9c",
-        "subColor": "#16a085"
+        "subColor": "#16a085",
+        "price": "$2,366,890"
     },
     {
         "name": "Vibranium",
@@ -42,9 +42,9 @@
         "elementWeight": 200.145,
         "id": 0,
         "status": "Prime",
-        "price": 140.99,
         "quantity": 340,
         "color": "#e74c3c",
-        "subColor": "#c0392b"
+        "subColor": "#c0392b",
+        "price": "$890 Billion"
     }
 ]

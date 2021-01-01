@@ -6,6 +6,7 @@
 }
 
 .shop-header{
+    position: relative;
     background-color: white;
     border-bottom: 1px solid black;
     padding: 40px;
@@ -16,6 +17,16 @@
     font-family: "Open Sans";
     font-weight: 800;
     color: #2f3640;
+}
+
+.shopping-bag{
+    position: absolute;
+    right: 75px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: #3498db;
+
 }
 
 .shop-jumbotron{

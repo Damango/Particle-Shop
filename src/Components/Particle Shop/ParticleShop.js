@@ -13,7 +13,7 @@ const ParticleShop = () => {
 
         <div className="shop-header">
             <div className="header-title">Particle Shop</div>
-            <div className="shopping-bag"></div>
+            <div className="shopping-bag"><i class="fas fa-shopping-cart"></i></div>
 
         </div>
         <div className="shop-jumbotron">

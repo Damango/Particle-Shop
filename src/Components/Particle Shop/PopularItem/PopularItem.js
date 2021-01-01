@@ -27,7 +27,7 @@ const PopularItem = (props) => {
             </div>
             <div className="item-footer">
                 <button className="buy-element-button">+ Add</button>
-                <div className="element-price"> $100,000</div>
+                <div className="element-price"> {props.itemData.price}</div>
             </div>
         </div>
 
@@ -47,7 +47,7 @@ const PopularItem = (props) => {
 
     function renderElementModal() {
         if (modalSwitch === 1) {
-            return (<ElementModal data={props.itemData} />)
+            return (<ElementModal openModalSwitch={openModalSwitch} data={props.itemData} />)
         }
     }
 }
