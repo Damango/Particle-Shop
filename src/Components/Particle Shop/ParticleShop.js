@@ -63,7 +63,8 @@ const ParticleShop = () => {
 
                 <div className="about-us-text">
                     <div className="text-body-1">Our goal here at Partycle Labs to provide quality elements with 0.000001% impurity rate. Our army of Asteroid Miners creates the most affordable price of elements in the entire galaxy</div>
-                    <div className="text-body-1">The elements in our shop come from the highest quality Asteroids that have been roaming around in a vaccum for milenia.</div>
+                    <div className="text-body-1">The elements in our shop come from the highest quality Asteroids that have been roaming around in a vaccum for millenia. Specially engineered machines to extract the purest elements removing any atom that does not match.</div>
+                    <div className="text-body-1">Our biggest advantage from Asteroid mining is the ability to harvest extreme amounts of any material or element that we want. Larger quantities of material means a cheaper price for you.</div>
                 </div>
 
             </div>

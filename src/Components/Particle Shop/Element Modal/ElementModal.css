@@ -86,3 +86,14 @@
     right: 20px;
     top: 10px;
 }
+
+
+.add-to-cart-button{
+    background-color: #3498db;
+    border-style: none;
+   color: white;
+    font-family: Poppins;
+    font-size: 20px;
+}
+
+
